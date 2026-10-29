@@ -171,6 +171,7 @@ if(!window.d3){document.write('<script src="https://cdn.jsdelivr.net/npm/d3@7.9.
 .fx-tab{flex-direction:column;align-items:flex-start;gap:0;padding:.55rem .85rem .5rem}
 .fx-tab small{font-size:11px;opacity:.75;font-weight:400}
 .fx-pagehint{font-size:13px;color:var(--color-fg-muted);margin:0;padding:.5rem 0 0}
+.fx-head{grid-template-columns:minmax(0,1fr) minmax(0,30rem)}.fx-head>div:first-child{min-width:min(100%,24rem)}
 .fx-actions{display:flex;flex-wrap:wrap;gap:var(--cds-gap-xs);justify-content:flex-end;margin-top:var(--cds-gap-xs)}
 .fx-btn{font:inherit;font-size:12px;padding:.35rem .7rem;border-radius:999px;border:1px solid var(--color-border-line);background:var(--color-panel);color:var(--color-fg);cursor:pointer;display:inline-flex;align-items:center;gap:.35em}
 .fx-btn:hover{border-color:var(--color-fg-muted)}.fx-btn:focus-visible{outline:2px solid var(--color-fg);outline-offset:2px}
@@ -184,7 +185,7 @@ if(!window.d3){document.write('<script src="https://cdn.jsdelivr.net/npm/d3@7.9.
 .fx-tile[data-goto]{cursor:pointer;transition:border-color .15s}
 .fx-tile[data-goto]:hover,.fx-tile[data-goto]:focus-visible{border-color:var(--color-fg-muted);outline:none}
 .fx-tile .go{font-size:11px;color:var(--color-fg-muted);margin-top:auto}
-.fx-sigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:var(--cds-gap-sm)}
+.fx-sigs{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,13rem),1fr));gap:var(--cds-gap-sm)}
 .fx-sig{border:1px solid var(--color-border-line);border-left:4px solid var(--color-bad);border-radius:var(--cds-radius);background:var(--color-panel);padding:var(--cds-pad-md);display:flex;flex-direction:column;gap:.35rem;cursor:pointer;text-align:left;font:inherit;color:inherit}
 .fx-sig.warn{border-left-color:var(--color-warn)}.fx-sig.mut{border-left-color:var(--cds-chart-reference)}
 .fx-sig:hover,.fx-sig:focus-visible{border-color:var(--color-fg-muted);outline:none}
@@ -210,6 +211,7 @@ if(!window.d3){document.write('<script src="https://cdn.jsdelivr.net/npm/d3@7.9.
 .fx-howto b{display:block;font-size:13px}
 .fx-ind td.l{white-space:normal;min-width:9rem;line-height:1.5}
 @media (max-width:640px){.fx-tab{padding:.5rem .65rem}.fx-tab small{display:none}.fx-kanban{grid-template-columns:repeat(4,minmax(15rem,84vw))}}
+@media (max-width:1100px){.fx-head{grid-template-columns:minmax(0,1fr)}.fx-badges{justify-content:flex-start}.fx-actions{justify-content:flex-start}}
 @media print{
   @page{size:A4 landscape;margin:12mm}
   body{background:#fff}.fx-theme,.fx-actions,.fx-navwrap,.fx-tools,.fx-seg,.fx-filter,.fx-tip,.fx-pop{display:none!important}
